@@ -17,7 +17,11 @@ class _HomePageState extends ConsumerState<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( title: const Text('J-Station'), centerTitle: true),
+      appBar: AppBar(
+        title: const Text('J-Station'),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 188, 0, 45),
+      ),
       body: Column(
         children: [
           Expanded(child: RadioTab()),

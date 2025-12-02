@@ -61,10 +61,9 @@ class RadioTab extends ConsumerWidget {
               ),
               trailing: isPlaying
                   ? LottieBuilder.network(
-                      'https://lottie.host/e64bee29-8553-4725-bd32-6beea2152f91/yzGLDF0tvi.json',
-                      width: 40,
+                      'https://lottie.host/ebdc7d77-e5c4-4020-8a53-11823bec3aa8/6UZS5XtXoO.json',
                     )
-                  : const Icon(Icons.play_circle_outline),
+                  : const Icon(Icons.play_circle_outline, size: 50),
               onTap: () async {
                 final handler =
                     ref.read(audioHandlerProvider) as MyAudioHandler;

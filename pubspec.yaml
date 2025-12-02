@@ -1,0 +1,33 @@
+name: j_station
+description: "MVP for Japanese radio and podcast streaming"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.10.0
+
+dependencies:
+  animate_gradient: ^0.0.4
+  audio_service: ^0.18.18
+  cached_network_image: ^3.4.1
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^3.0.3
+  google_mobile_ads: ^6.0.0
+  http: ^1.6.0
+  just_audio: ^0.10.5
+  lottie: ^3.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+flutter_launcher_icons:
+  image_path: "assets/icon/j_station_icon.png"
+  android: true
+  ios: true

@@ -1,7 +1,7 @@
 name: j_station
 description: "MVP for Japanese radio and podcast streaming"
 publish_to: 'none'
-version: 0.1.0+1
+version: 0.2.0+3
 
 environment:
   sdk: ^3.10.0
@@ -17,6 +17,7 @@ dependencies:
   http: ^1.6.0
   just_audio: ^0.10.5
   lottie: ^3.3.2
+  webfeed_plus: ^1.1.2
 
 dev_dependencies:
   flutter_test:

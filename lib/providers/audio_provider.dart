@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/legacy.dart';
 import 'package:j_station/services/api_service.dart';
 import 'package:j_station/models/radio_station.dart';
 import 'package:j_station/services/audio_handler.dart';
+import 'package:j_station/models/podcast.dart';
 
 final apiServiceProvider = Provider((ref) => ApiService());
 
@@ -11,6 +12,17 @@ final radioStationProvider = FutureProvider<List<RadioStation>>((ref) async {
   final apiService = ref.watch(apiServiceProvider);
   return apiService.fetchStations();
 });
+
+final podcastProvider = FutureProvider<List<Podcast>>((ref) async {
+  final apiService = ref.watch(apiServiceProvider);
+  return apiService.fetchPodcasts();
+});
+
+final podcastEpisodesProvider =
+    FutureProvider.family<List<PodcastEpisode>, String>((ref, feedUrl) async {
+      final apiService = ref.watch(apiServiceProvider);
+      return apiService.fetchPodcastEpisodes(feedUrl);
+    });
 
 final currentMediaProvider = StreamProvider((ref) {
   final handler = ref.watch(audioHandlerProvider);

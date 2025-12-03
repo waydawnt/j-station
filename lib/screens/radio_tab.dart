@@ -36,6 +36,9 @@ class RadioTab extends ConsumerWidget {
             }
 
             final station = stations[index];
+            final language =
+                station.language![0].toUpperCase() +
+                station.language!.substring(1);
             final isPlaying =
                 ref.watch(currentPlayingProvider).url == station.urlResolved;
 
@@ -56,7 +59,7 @@ class RadioTab extends ConsumerWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               subtitle: Text(
-                '${station.language ?? ''} • ${station.country ?? ''}',
+                '$language • ${station.country ?? ''}',
                 style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
               ),
               trailing: isPlaying

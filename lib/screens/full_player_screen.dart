@@ -84,6 +84,8 @@ class _FullScreenState extends ConsumerState<FullPlayerScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
                     currentPlaying.title,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 24,

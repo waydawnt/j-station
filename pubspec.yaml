@@ -1,7 +1,7 @@
 name: j_station
 description: "MVP for Japanese radio and podcast streaming"
 publish_to: 'none'
-version: 0.2.0+3
+version: 0.2.1+4
 
 environment:
   sdk: ^3.10.0

@@ -63,7 +63,7 @@ class PodcastDetails extends ConsumerWidget {
           Expanded(
             child: episodes.when(
               data: (episodeList) {
-                if (episodeList.isNotEmpty) {
+                if (episodeList.isEmpty) {
                   return const Center(child: Text('No episodes available.'));
                 }
 
